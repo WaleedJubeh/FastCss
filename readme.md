@@ -1,6 +1,6 @@
 # FastCss
 
- Are you very tierd to repeat yourself ! 😴😓
+ Are you very tired  to repeat yourself ! 😴😓
 
  In each project you wrote the same code! 🌌
 
