@@ -1,11 +1,11 @@
 # FastCss
 
- Are you very tired  to repeat yourself ! 😴😓
+ Are you very tired of repeating yourself ! 😴😓
 
  In each project you wrote the same code! 🌌
 
 
- Are you need to make css code or override the classes for each responsive query ? 🚗🚙🚌🚎
+ Do you need to make css code or override the classes for each responsive query ? 🚗🚙🚌🚎
 
 ## We Are the Solution ✅✅✅
 
