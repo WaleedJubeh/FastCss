@@ -1,7 +1,10 @@
 const CssClass = require("./classes/CssClass.js");
 const fs = require('fs');
-const reducerOneAttribute = (accumulator, currentValue) => accumulator + currentValue.printMany(1, 100);
-const reduceManyAttribute = (accumulator, currentValue) => accumulator + currentValue.printManyAndManyAttribute(1, 100);
+const START_FROM = 0;
+const END_TO = 100;
+
+const reducerOneAttribute = (accumulator, currentValue) => accumulator + currentValue.printMany(START_FROM, END_TO);
+const reduceManyAttribute = (accumulator, currentValue) => accumulator + currentValue.printManyAndManyAttribute(START_FROM, END_TO);
 responsiveRapper = (config, data) => {
     string = "@media only screen";
     if (config['min-width'])
@@ -125,6 +128,8 @@ results += CssClass.directPrint("f-gr-1", "flex-grow", ".%s{%s:1}");
 results += CssClass.directPrint("f-gr-0", "flex-grow", ".%s{%s:0}");
 results += CssClass.directPrint("f-sh-1", "flex-grow", ".%s{%s:1}");
 results += CssClass.directPrint("f-sh-0", "flex-grow", ".%s{%s:0}");
+results += CssClass.directPrint("h-full", "height", ".%s{%s:100%%}");
+results += CssClass.directPrint("w-full", "width", ".%s{%s:100%%}");
 
 let responsive = "";
 

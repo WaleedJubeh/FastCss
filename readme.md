@@ -1,5 +1,4 @@
 # FastCss
-------
 
  Are you very tierd to repeat yourself ! 😴😓
 
@@ -11,7 +10,6 @@
 ## We Are the Solution ✅✅✅
 
 # Installation
----
 
 ### Just copy and past 💯
 ## css
@@ -25,8 +23,11 @@ Or  [Download me now !](https://1562868238.rsc.cdn77.org/fastcss.min.css)
 ### [scss Link](https://1562868238.rsc.cdn77.org/fastcss.min.scss)
 
 # Usage
----
 ## key maps
+
+    w: width
+
+    h: height
 
     m: margin;
 
@@ -102,7 +103,6 @@ fz-1,fz-20, fz-15,fz-16
 
 
 # Media Query
-------
 
 ## We have three main resolutions
 
@@ -138,4 +138,29 @@ fz-1,fz-20, fz-15,fz-16
     f-j-around ->   justify-content: space-around
     f-j-evenly ->   justify-content: space-evenly
     
-## 
+# Width & Height
+
+### we provide height and width from 0px to 100px.
+
+    Example:
+        h-1 -> height:1px;
+        w-40 -> width: 40px;
+### Also we provide 100% value
+        h-full -> height:100%;
+        w-full -> width:100%;
+
+Example:
+ ```
+<div class="h-full w-full"></div>
+ ```
+
+ # Make your version
+
+
+You can change the generated classes range by cloning the project then changing the following variables in the app.js
+```
+const START_FROM = 0;
+const END_TO = 100;
+```
+
+### Don't fotget to support me by giving the project a nice star
