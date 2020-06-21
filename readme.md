@@ -163,4 +163,4 @@ const START_FROM = 0;
 const END_TO = 100;
 ```
 
-### Don't fotget to support me by giving the project a nice star
+### Don't forget to support me by giving the project a nice star
