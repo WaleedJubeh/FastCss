@@ -1,0 +1,14 @@
+{
+  "name": "utilitygenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CssClass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sprintf-js": "^1.1.2"
+  }
+}
