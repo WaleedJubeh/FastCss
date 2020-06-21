@@ -60,6 +60,11 @@ let manyClassesOneAttributeMeduimScreen = [
     new CssClass("fz-md", ["font-size"], "%s:%dpx !important"),
     new CssClass("wpx-md", ["width"], "%s:%dpx !important"),
     new CssClass("hpx-md", ["height"], "%s:%dpx !important"),
+    new CssClass("m-x-md", ["margin-right", "margin-left"], "%s:%dpx !important;"),
+    new CssClass("m-y-md", ["margin-top", "margin-bottom"], "%s:%dpx !important;"),
+    new CssClass("p-x-md", ["margin-right", "margin-left"], "%s:%dpx !important;"),
+    new CssClass("p-y-md", ["padding-top", "padding-bottom"], "%s:%dpx !important;"),
+
 ]
 let manyClassesOneAttributeSmallScreen = [
     new CssClass("m-sm", ["margin"], "%s:%dpx !important"),
@@ -75,6 +80,10 @@ let manyClassesOneAttributeSmallScreen = [
     new CssClass("fz-sm", ["font-size"], "%s:%dpx !important"),
     new CssClass("wpx-sm", ["width"], "%s:%dpx !important"),
     new CssClass("hpx-sm", ["height"], "%s:%dpx !important"),
+    new CssClass("m-x-sm", ["margin-right", "margin-left"], "%s:%dpx !important;"),
+    new CssClass("m-y-sm", ["margin-top", "margin-bottom"], "%s:%dpx !important;"),
+    new CssClass("p-x-sm", ["margin-right", "margin-left"], "%s:%dpx !important;"),
+    new CssClass("p-y-sm", ["padding-top", "padding-bottom"], "%s:%dpx !important;"),
 
 ]
 let manyClassesOneAttributeBigScreen = [
@@ -91,6 +100,10 @@ let manyClassesOneAttributeBigScreen = [
     new CssClass("fz-lg", ["font-size"], "%s:%dpx !important"),
     new CssClass("wpx-lg", ["width"], "%s:%dpx !important"),
     new CssClass("hpx-lg", ["height"], "%s:%dpx !important"),
+    new CssClass("m-x-lg", ["margin-right", "margin-left"], "%s:%dpx !important;"),
+    new CssClass("m-y-lg", ["margin-top", "margin-bottom"], "%s:%dpx !important;"),
+    new CssClass("p-x-lg", ["margin-right", "margin-left"], "%s:%dpx !important;"),
+    new CssClass("p-y-lg", ["padding-top", "padding-bottom"], "%s:%dpx !important;"),
 
 ]
 let results = "";
@@ -115,19 +128,19 @@ results += CssClass.directPrint("f-sh-0", "flex-grow", ".%s{%s:0}");
 
 let responsive = "";
 
-responsive = manyClassesOneAttributeSmallScreen.reduce(reducerOneAttribute, "");
+responsive = manyClassesOneAttributeSmallScreen.reduce(reduceManyAttribute, "");
 responsive += CssClass.directPrint("m-r-sm-auto", "margin-right", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("p-r-sm-auto", "padding-right", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("m-l-sm-auto", "margin-left", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("p-l-sm-auto", "padding-left", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("m-t-sm-auto", "margin-top", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("p-t-sm-auto", "padding-top", ".%s{%s:auto !important}");
-responsive += CssClass.directPrint("m-b-    sm-auto", "margin-bottom", ".%s{%s:auto !important}");
+responsive += CssClass.directPrint("m-b-sm-auto", "margin-bottom", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("p-b-sm-auto", "padding-bottom", ".%s{%s:auto !important}");
 
 results += responsiveRapper(smallScreenResponsive, responsive);
 
-responsive = manyClassesOneAttributeMeduimScreen.reduce(reducerOneAttribute, "");
+responsive = manyClassesOneAttributeMeduimScreen.reduce(reduceManyAttribute, "");
 responsive += CssClass.directPrint("m-r-md-auto", "margin-right", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("p-r-md-auto", "padding-right", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("m-l-md-auto", "margin-left", ".%s{%s:auto !important}");
@@ -139,7 +152,7 @@ responsive += CssClass.directPrint("p-b-md-auto", "padding-bottom", ".%s{%s:auto
 
 results += responsiveRapper(meduimScreenResponsive, responsive);
 
-responsive = manyClassesOneAttributeBigScreen.reduce(reducerOneAttribute, "");
+responsive = manyClassesOneAttributeBigScreen.reduce(reduceManyAttribute, "");
 responsive += CssClass.directPrint("m-r-lg-auto", "margin-right", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("p-r-lg-auto", "padding-right", ".%s{%s:auto !important}");
 responsive += CssClass.directPrint("m-l-lg-auto", "margin-left", ".%s{%s:auto !important}");
